@@ -1,0 +1,215 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: uploads
+public_folder: /uploads
+collections:
+  - name: config
+    label: Config
+    files:
+      - name: config
+        label: Config
+        file: _config.yml
+        fields:
+          - name: title
+            label: Title
+            widget: text
+            required: true
+          - name: footer
+            widget: object
+            required: false
+            label: Footer
+            hint: Footer configuration
+            fields:
+              - name: social_links
+                widget: list
+                required: false
+                label: Social Links
+                hint: Links to social pages
+                fields:
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Title
+                  - name: icon
+                    widget: string
+                    required: false
+                    label: Icon
+                    hint: Font Awesome Icon
+                  - name: link_url
+                    widget: string
+                    required: false
+                    label: Link URL
+  - name: home
+    label: Home
+    files:
+      - name: home
+        label: Home
+        file: index.md
+        fields:
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: home
+          - name: sections
+            widget: list
+            required: false
+            label: Sections
+            hint: Home sections
+            types:
+              - name: intro
+                widget: object
+                label: Intro
+                fields:
+                  - name: next_element_id
+                    widget: string
+                    required: false
+                    label: Next Section ID
+                    hint: >-
+                      The section ID of the section that will be scrolled to
+                      when the "Next" button is clicked
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Title
+                    default: Intro
+                    hint: Title of the section link shown in the navigation bar
+                  - name: element_id
+                    widget: string
+                    required: false
+                    label: Section ID
+                    default: intro
+                    hint: The section ID must be unique among all home sections
+                  - name: component
+                    widget: hidden
+                    required: true
+                    label: Component
+                    default: intro.html
+                  - name: display_title
+                    widget: string
+                    required: false
+                    label: Section title
+                  - name: content
+                    widget: text
+                    required: false
+                    label: Text
+                    hint: Intro text
+              - name: content_box
+                widget: object
+                label: Content Box
+                fields:
+                  - name: next_element_id
+                    widget: string
+                    required: false
+                    label: Next Section ID
+                    hint: >-
+                      The section ID of the section that will be scrolled to
+                      when the "Next" button is clicked
+                  - name: element_id
+                    widget: string
+                    required: false
+                    label: Section ID
+                    hint: The section ID must be unique among all home sections
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Title
+                    hint: Title of the section link shown in the navigation bar
+                  - name: side
+                    widget: select
+                    required: true
+                    label: Side
+                    options:
+                      - left
+                      - right
+                  - name: component
+                    widget: hidden
+                    required: true
+                    label: Component
+                    default: content_box.html
+                  - name: content
+                    widget: text
+                    required: false
+                    label: Text
+              - name: work
+                widget: object
+                label: Work
+                fields:
+                  - name: next_element_id
+                    widget: string
+                    required: false
+                    label: Next Section ID
+                    hint: >-
+                      The section ID of the section that will be scrolled to
+                      when the "Next" button is clicked
+                  - name: element_id
+                    widget: string
+                    required: false
+                    label: Section ID
+                    hint: The section ID must be unique among all home sections
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Title
+                    hint: Title of the section link shown in the navigation bar
+                  - name: component
+                    widget: hidden
+                    required: true
+                    label: Component
+                    default: work.html
+                  - name: content
+                    widget: text
+                    required: false
+                    label: Text
+                  - name: gallery
+                    widget: list
+                    required: false
+                    label: Image gallery
+                    fields:
+                      - name: title
+                        widget: string
+                        required: false
+                        label: Title
+                      - name: full_image
+                        widget: image
+                        required: false
+                        label: Full Image
+                      - name: thumb_image
+                        widget: image
+                        required: false
+                        label: Thumbnail Image
+              - name: contact
+                widget: object
+                label: Contact
+                fields:
+                  - name: next_element_id
+                    widget: string
+                    required: false
+                    label: Next Section ID
+                    hint: >-
+                      The section ID of the section that will be scrolled to
+                      when the "Next" button is clicked
+                  - name: element_id
+                    widget: string
+                    required: false
+                    label: Section ID
+                    hint: The section ID must be unique among all home sections
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Title
+                    hint: Title of the section link shown in the navigation bar
+                  - name: component
+                    widget: hidden
+                    required: true
+                    label: Component
+                    default: contact.html
+                  - name: display_title
+                    widget: string
+                    required: false
+                    label: Section title
+                  - name: content
+                    widget: text
+                    required: false
+                    label: Text
