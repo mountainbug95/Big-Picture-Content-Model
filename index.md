@@ -8,7 +8,7 @@ sections:
     content: |-
       Blandit ut Col Cubilia mus adipiscing erat accumsan interdum at Vestibulum
       sed faucibus cep arcu ipsum vel Sagittis Commodo Condimentum accumsan.
-    widget: intro
+    template: intro
   - title: What I Do
     element_id: one
     side: right
@@ -19,7 +19,7 @@ sections:
       condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus eu.
       Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas
       consectetur magna.
-    widget: content_box
+    template: content_box
   - title: Who I Am
     element_id: two
     side: left
@@ -30,7 +30,7 @@ sections:
       condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus eu.
       Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas
       consectetur magna.
-    widget: content_box
+    template: content_box
   - title: My Work
     element_id: work
     component: work.html
@@ -58,7 +58,7 @@ sections:
       condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus eu.
       Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas
       consectetur magna vitae.
-    widget: work
+    template: work
   - title: Contact
     element_id: contact
     display_title: Say Hello.
@@ -66,6 +66,6 @@ sections:
     content: >-
       Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore
       condimentum.
-    widget: contact
+    template: contact
 layout: home
 ---
